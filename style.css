@@ -1,3 +1,4 @@
+/* Reset some default styles */
 body, ul, li {
     margin: 0;
     padding: 0;
@@ -10,10 +11,15 @@ body {
 }
 
 header {
-    background-color: #333;
-    color: white;
+    position: fixed;
     text-align: center;
-    padding: 10px 0;
+    padding: 2rem 0; /* Increase the vertical padding to make the header taller */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    z-index: 1000;
 }
 
 nav ul {
@@ -31,7 +37,74 @@ nav ul li a {
     font-weight: bold;
 }
 
-.main-content {
+#about {
     text-align: center;
+    padding-top: 15%;
+    font-size: 18px;
+}
+
+/* Add specific styles for each page as needed */
+nav {
+    text-align: center;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+    cursor: pointer;
+}
+section {
+    width: 100%;
+    height: 100vh; /* Set the height to 100vh to span the entire screen */
     padding: 20px;
+    padding-top: 10%;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+.fixed-header {
+    width: 100%;
+    height: auto; /* Adjust this value as needed to control the overall height */
+    overflow: hidden; /* Hide overflow content outside the viewport */
+    position: relative;
+}
+
+/* CSS for smooth scrolling */
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling behavior */
+}
+
+/* CSS for the resume section */
+#cv {
+    font-family: monospace;
+    background-color: #090326;
+    color: #fff;
+    padding: 20px;
+    padding-top: 5%;
+    text-align: left;
+    font-size: 18px;
+    white-space: pre; /* Preserve whitespace and line breaks */
+}
+
+.comment {
+    color: #7b7a80;
+}
+
+.operator {
+    color: white; /* Gray color for operators like "=" */
+}
+
+.string {
+    color: #e3e036;
+}
+
+.variable {
+    color: #9ccce6; /* Dark blue color for variable names like "name" */ 
+}
+
+.keyword {
+    color: #3c9ed6; /* Light blue color for keywords like "this" */ 
+}
+
+.int {
+    color: #e67f12;
 }
