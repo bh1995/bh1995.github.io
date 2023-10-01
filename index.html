@@ -7,20 +7,71 @@
     <title>My Portfolio</title>
 </head>
 <body>
+  <div class="fixed-header">
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">About Me</a></li>
-                <li><a href="resume.html">CV/Resume</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#cv">CV/Resume</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-      <section class="main-content">
-          <h1>Hello and welcome, my name is B H</h1>
-    <p><span id="prefix">I am a </span><span id="rotating-text"></span><span id="cursor">|</span></p>
-      </section>
+    <section id="about">
+      <h1>Hello and welcome, my name is Bjørn Hansen</h1>
+      <p><span id="prefix">I am a </span><span id="rotating-text"></span><span id="cursor">|</span></p>
+      <br>
+      <br>
+      <br>
+      <p><span>
+        I am developer based in Copenhagen, Denmark. 
+      </span></p>  
+    </section>
+    <section id="cv">
+      <h2>Resume</h2>
+        <pre>
+        <span class="keyword">class BjornHansen</span> {
+        <span class="comment">// Learning is my main skill.</span>
+        <span class="keyword">constructor</span>() {
+        <span class="variable">this</span>.<span class="keyword">name</span> = <span class="string">'Bjorn Hansen'</span>
+        <span class="variable">this</span>.<span class="keyword">dayOfBirthTimestamp</span> = <span class="int">803174402</span>
+        <span class="variable">this</span>.<span class="keyword">email</span> = <span class="string">'bjorn_hansen95(at)yahoo.com'</span>
+        }
+        <span class="keyword">experience</span>() {
+        <span class="variable">return</span> [
+        { <span class="string">'03.2023-now'</span> : <span class="string">'IT Consultant / Manager at Cognizant, Copgenhagen'</span> }
+        { <span class="string">'01.2022-02.2023'</span> : <span class="string">'Data Engineer at Postnord, Copenhagen'</span> }
+        { <span class="string">'09.2021-01.2022'</span> : <span class="string">'IT Consultant / Data Engineer at Capgemini, Copenhagen'</span> }
+          ]
+        }
+        <span class="keyword">education</span>() {
+        <span class="variable">return</span> [
+        { <span class="string">'03.2020-06.2021'</span> : <span class="string">'Technical University of Denmark - Mathematical Modeling (M.Sc.Eng.)'</span> }
+        { <span class="string">'09.2018-01-2019'</span> : <span class="string">'Hanyang University - Exchange program in Seoul, South Korea'</span> }
+        { <span class="string">'09.2016-06.2019'</span> : <span class="string">'Linnaeus University - Energy Technology Engineering (B.Eng.)'</span> }
+          ]
+        }
+        <span class="keyword">skills</span>() {
+        <span class="variable">return</span> [
+        <span class="string">'HTML/CSS/JS'</span>, <span class="string">'React'</span>, <span class="string">'Spark'</span>, <span class="string">'PyTorch'</span>, <span class="string">'Bash'</span>, <span class="string">'Python'</span>, <span class="string">'Node'</span>, <span class="string">'SQL'</span>, <span class="string">'Azure'</span>, 
+        <span class="string">'Web Apps'</span>, <span class="string">'GIT'</span>
+          ]
+        }
+        </pre>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>This is the Projects section of my portfolio. Add your content here.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>This is the Contact section of my portfolio. Add your contact information here.</p>
+    </section>
+  </div>
 <script src="script.js"></script>
 </body>
 </html>
+
