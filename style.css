@@ -108,3 +108,87 @@ html {
 .int {
     color: #e67f12;
 }
+
+.tooltip {
+    display: inline-block;
+    cursor: pointer;
+}
+
+//* CSS for the window-like tooltip */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip-window {
+    position: fixed;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1;
+    width: 25%; /* Set the width to 25% of the viewport */
+    top: 50%; /* Position the tooltip in the middle vertically */
+    left: 50%; /* Position the tooltip in the middle horizontally */
+    transform: translate(-50%, -50%); /* Center the tooltip */
+    text-align: left; /* Adjust the alignment as needed */
+    max-height: 50vh; /* Set a maximum height of 50% of the viewport height */
+    overflow-y: auto; /* Enable vertical scrolling when content overflows */
+    white-space: pre-line; /* Preserve line breaks in the text */
+}
+
+.tooltip:hover .tooltip-window {
+    visibility: visible;
+    opacity: 1;
+}
+
+#projects ul {
+    list-style-type: disc; /* Use bullet points for the list items */
+    text-align: center;
+    font-size: 24px;
+}
+
+#projects ul li {
+    max-width: 90%; /* Set a maximum width for the description text */
+    margin-bottom: 5%; /* Add some spacing between each project */
+    text-align: center;
+}
+
+.title-container {
+    text-align: center; /* Center-align the title and the line */
+}
+
+/* CSS for the horizontal line */
+.title-line {
+    width: 50%; /* Adjust the line's width as needed */
+    border: none;
+    height: 1px;
+    background-color: #000; /* Line color */
+    margin: 10px auto; /* Center the line horizontally and add spacing */
+}
+
+/* CSS for the contact section */
+#contact {
+    text-align: center;
+    margin: 20px; /* Add margin for spacing */
+}
+
+/* CSS for the icons */
+#contact a {
+    text-decoration: none;
+    color: #333; /* Text color for the links */
+    margin: 10px; /* Add margin around the icons */
+}
+
+#contact a:hover {
+    color: #0077B5; /* Color change on hover (LinkedIn) */
+}
+
+
+
+
