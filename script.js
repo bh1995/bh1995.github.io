@@ -66,5 +66,56 @@ function updatePrefix() {
     prefixElement.textContent = "I design and develop ";
 }
 
+
+// Function to initialize tooltips
+    // Function to load tooltips from JSON file
+    function loadTooltips(callback) {
+        fetch('tooltips.json')
+            .then(response => response.json())
+            .then(data => callback(data))
+            .catch(error => console.error('Error loading tooltips:', error));
+    }
+
+// Function to initialize tooltips
+function initTooltips(tooltipsData) {
+    const tooltips = document.querySelectorAll('.tooltip');
+    tooltips.forEach(tooltip => {
+        const tooltipKey = tooltip.getAttribute('data-tooltip');
+        if (tooltipsData.hasOwnProperty(tooltipKey)) {
+            const tooltipText = tooltipsData[tooltipKey];
+            tooltip.addEventListener('mouseenter', () => {
+                showTooltip(tooltip, tooltipText);
+            });
+            tooltip.addEventListener('mouseleave', () => {
+                hideTooltip(tooltip);
+            });
+        }
+    });
+}
+
+// Function to show tooltip
+function showTooltip(element, text) {
+    const tooltipElement = document.createElement('div');
+    tooltipElement.classList.add('tooltip-window');
+    // Replace newline characters with HTML line breaks
+    const formattedText = text.replace(/<br>/g, '\n \n');
+    tooltipElement.textContent = formattedText;
+    element.appendChild(tooltipElement);
+}
+
+// Function to hide tooltip
+function hideTooltip(element) {
+    const tooltipElement = element.querySelector('.tooltip-window');
+    if (tooltipElement) {
+        tooltipElement.remove();
+    }
+}
+
+
 // Initial call to display the prefix
 updatePrefix();
+
+// Load tooltips and initialize them
+loadTooltips(initTooltips);
+
+
