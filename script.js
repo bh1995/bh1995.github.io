@@ -111,11 +111,12 @@ function hideTooltip(element) {
     }
 }
 
-
 // Initial call to display the prefix
 updatePrefix();
 
 // Load tooltips and initialize them
 loadTooltips(initTooltips);
+
+
 
 
