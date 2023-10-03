@@ -8,6 +8,11 @@ body, ul, li {
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
+    margin: 0 auto; /* Center the content horizontally */
+    max-width: 100%; /* Set a maximum width for the content */
+    padding: 0 1rem; /* Add some padding for better readability */
+    // overflow-x: hidden; /* Hide horizontal scrollbar if needed */
+    // overflow-y: hidden; /* Hide horizontal scrollbar if needed */
 }
 
 header {
@@ -28,7 +33,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0 1rem;
 }
 
 nav ul li a {
@@ -40,7 +45,7 @@ nav ul li a {
 #about {
     text-align: center;
     padding-top: 15%;
-    font-size: 18px;
+    font-size: 1.3rem;
 }
 
 /* Add specific styles for each page as needed */
@@ -50,13 +55,13 @@ nav {
 nav a {
     color: #fff;
     text-decoration: none;
-    margin: 0 20px;
+    margin: 0 1rem;
     cursor: pointer;
 }
 section {
     width: 100%;
     height: 100vh; /* Set the height to 100vh to span the entire screen */
-    padding: 20px;
+    padding: 1rem;
     padding-top: 10%;
     text-align: center;
     background-color: #f8f8f8;
@@ -78,11 +83,15 @@ html {
     font-family: monospace;
     background-color: #090326;
     color: #fff;
-    padding: 20px;
+    padding: 0.5rem;
     padding-top: 5%;
     text-align: left;
-    font-size: 18px;
+    font-size: 1.15rem;
     white-space: pre; /* Preserve whitespace and line breaks */
+}
+
+#cv h2 {
+  padding-left: 5rem;
 }
 
 .comment {
@@ -125,14 +134,14 @@ html {
     position: fixed;
     background-color: #333;
     color: #fff;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 0.5rem;
+    border-radius: 0.1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s;
     z-index: 1;
-    width: 25%; /* Set the width to 25% of the viewport */
+    width: 40%; /* Set the width to 25% of the viewport */
     top: 50%; /* Position the tooltip in the middle vertically */
     left: 50%; /* Position the tooltip in the middle horizontally */
     transform: translate(-50%, -50%); /* Center the tooltip */
@@ -149,8 +158,9 @@ html {
 
 #projects ul {
     list-style-type: disc; /* Use bullet points for the list items */
-    text-align: center;
-    font-size: 24px;
+    text-align: justify;
+    font-size: 1.25rem;
+    padding-left: 2rem;
 }
 
 #projects ul li {
@@ -169,24 +179,78 @@ html {
     border: none;
     height: 1px;
     background-color: #000; /* Line color */
-    margin: 10px auto; /* Center the line horizontally and add spacing */
+    margin: 0.5rem auto; /* Center the line horizontally and add spacing */
 }
 
 /* CSS for the contact section */
 #contact {
     text-align: center;
-    margin: 20px; /* Add margin for spacing */
+    margin: 1rem; /* Add margin for spacing */
+    font-size: 1.25rem;
 }
 
 /* CSS for the icons */
 #contact a {
     text-decoration: none;
     color: #333; /* Text color for the links */
-    margin: 10px; /* Add margin around the icons */
+    margin: 0.5rem; /* Add margin around the icons */
 }
 
 #contact a:hover {
     color: #0077B5; /* Color change on hover (LinkedIn) */
+}
+
+/* CSS for the blob wrapper */
+.blob { 
+  width: 15rem;
+  height: 15rem;
+  transition: border-radius 2.2s linear;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  background: #B0BEC5;
+}
+
+#blob2 { 
+  width: 15rem;
+  height: 15rem;
+  transition: border-radius 2.2s linear;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  background: #6881a8;
+}
+
+.blob-wrap1 {
+    --blob-size: 10rem; /* Set the blob size */
+    transition: border-radius 2.2s linear;
+    width: var(--blob-size);
+    height: var(--blob-size);
+    animation: moveBlob1 10s linear infinite alternate;
+    position: absolute;
+}
+
+.blob-wrap2 {
+    --blob-size: 8rem; /* Set the blob size */
+    transition: border-radius 2.2s linear;
+    width: var(--blob-size);
+    height: var(--blob-size);
+    animation: moveBlob2 8s linear infinite alternate;
+    position: absolute;
+}
+
+@keyframes moveBlob1 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(calc(100vw - var(--blob-size)), calc(100vh - var(--blob-size)));
+    }
+}
+
+@keyframes moveBlob2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(calc(100vw - var(--blob-size)), calc(0vh + var(--blob-size)));
+    }
 }
 
 
