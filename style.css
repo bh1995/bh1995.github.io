@@ -200,6 +200,13 @@ html {
     color: #0077B5; /* Color change on hover (LinkedIn) */
 }
 
+/* CSS for contact icons */
+.contact-icon {
+    width: 25rem; /* Set the width of the icons */
+    height: 25rem; /* Set the height of the icons */
+    margin-right: 5rem; /* Add spacing between icons */
+}
+
 /* CSS for the blob wrapper */
 .blob { 
   width: 15rem;
