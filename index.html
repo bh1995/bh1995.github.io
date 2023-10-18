@@ -1,37 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-KJJP20N5KM"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-KJJP20N5KM");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>My Portfolio</title>
-</head>
-<body>
-  <div class="fixed-header">
-    <header>
+  </head>
+  <body>
+    <div class="fixed-header">
+      <header>
         <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#cv">CV/Resume</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+          <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#cv">CV/Resume</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </nav>
-    </header>
-  </div>
+      </header>
+    </div>
     <section id="about">
       <h1>Hello and welcome, my name is Bjørn Hansen</h1>
-      <p><span id="prefix">I am a </span><span id="rotating-text"></span><span id="cursor">|</span></p>
-      <br>
-      <br>
-      <br>
-      <p><span>
-        I am developer based in Copenhagen, Denmark. 
-      </span></p>  
+      <p>
+        <span id="prefix">I am a </span><span id="rotating-text"></span
+        ><span id="cursor">|</span>
+      </p>
+      <br />
+      <br />
+      <br />
+      <p><span> I am developer based in Copenhagen, Denmark. </span></p>
     </section>
     <section id="cv">
       <h2>Resume</h2>
-        <pre>
+      <pre>
         <span class="keyword">class BjornHansen</span> {
         <span class="comment">// Hover the mouse over any text to read more.</span>
         <span class="keyword">constructor</span>() {
@@ -67,62 +82,86 @@
     </section>
 
     <section id="projects">
-        <h2>Projects</h2>
-        <hr class="title-line"> <!-- Add the line within the container -->
-        <br>
-        <ul>
+      <h2>Projects</h2>
+      <hr class="title-line" />
+      <!-- Add the line within the container -->
+      <br />
+      <ul>
         <li>
-            <p><strong>Heart disease classification using transformers in Pytorch:</strong></p>
-            Before Generative LLMs became so hyped in main stream media, they were hyped within the machine learning community. The OG "Attention is All You Need" paper showcased the power of the transformer architecture. 
-            
-            In this project I showcase how this classic language model can be re-constructed to perform classification on any sequential data input. More specifically I use real ECG signals to train a model that achieves high accuracy in predicting a common heart disease called Atrial fibrillation. 
-            <br> <br>
-            <a href="towardsdatascience.com/heart-disease-classification-using-transformers-in-pytorch-8dbd277e079">Medium blog post</a>, <a href="https://github.com/bh1995/AF-classification">Github</a>
+          <p>
+            <strong
+              >Heart disease classification using transformers in
+              Pytorch:</strong
+            >
+          </p>
+          Before Generative LLMs became so hyped in main stream media, they were
+          hyped within the machine learning community. The OG "Attention is All
+          You Need" paper showcased the power of the transformer architecture.
+          In this project I showcase how this classic language model can be
+          re-constructed to perform classification on any sequential data input.
+          More specifically I use real ECG signals to train a model that
+          achieves high accuracy in predicting a common heart disease called
+          Atrial fibrillation.
+          <br />
+          <br />
+          <a
+            href="towardsdatascience.com/heart-disease-classification-using-transformers-in-pytorch-8dbd277e079"
+            >Medium blog post</a
+          >, <a href="https://github.com/bh1995/AF-classification">Github</a>
         </li>
-        <br>
+        <br />
         <li>
-            <p><strong>Cycle GAN in Pytorch:</strong></p>
-            The earliest implementation of generative AI (as far as I know) was created by Ian Goodfellow using a GAN architecture. Deriving from the orignal GAN idea, the highly successful Cycle GAN was created.
-            
-            In this project I implement the Cycle GAN which works by converting zebras to horses and vice-versa. See the medium blog post link for an in-depth description of the project and the Github link for the project code.
-            <br> <br>
-            <a href="https://towardsdatascience.com/cycle-gan-with-pytorch-ebe5db947a99">Medium blog post</a>.
+          <p><strong>Cycle GAN in Pytorch:</strong></p>
+          The earliest implementation of generative AI (as far as I know) was
+          created by Ian Goodfellow using a GAN architecture. Deriving from the
+          orignal GAN idea, the highly successful Cycle GAN was created. In this
+          project I implement the Cycle GAN which works by converting zebras to
+          horses and vice-versa. See the medium blog post link for an in-depth
+          description of the project and the Github link for the project code.
+          <br />
+          <br />
+          <a
+            href="https://towardsdatascience.com/cycle-gan-with-pytorch-ebe5db947a99"
+            >Medium blog post</a
+          >.
         </li>
-        <br>
+        <br />
         <!-- <li>
             <strong>Project Name 3:</strong> Description of the third project goes here.
         </li> -->
-    </ul>
+      </ul>
     </section>
 
     <section id="contact">
-        <h2>Contact</h2>
-        <p>Feel free to get in touch through the following channels:</p>
-        
-        <!-- LinkedIn Icon with Link -->
-        <a href="https://www.linkedin.com/in/bj%C3%B8rn-hansen-4958b4107/" target="_blank">
-<!--             <i class="fa fa-linkedin"></i> LinkedIn -->
-            <img src="./images/linkedin.png" alt="" class="contact-icon">
-        </a>
-        
-        <!-- Medium Blog Icon with Link -->
-        <a href="https://medium.com/@bjornkhansen95" target="_blank">
-<!--             <i class="fa fa-medium"></i> Medium Blog -->
-            <img src="./images/medium.png" alt="" class="contact-icon">
-        </a>   
-    <!-- Container for Floating Blobs -->
-    <div class="blob-wrap1 x">
-      <div class="blob y"></div>
-    </div>
-    <div class="blob-wrap2 x2">
-      <div class="blob" id="blob2"></div>
-    </div>
-    <!-- <div class="blob-wrap blob-2 x2">
+      <h2>Contact</h2>
+      <p>Feel free to get in touch through the following channels:</p>
+
+      <!-- LinkedIn Icon with Link -->
+      <a
+        href="https://www.linkedin.com/in/bj%C3%B8rn-hansen-4958b4107/"
+        target="_blank"
+      >
+        <!--             <i class="fa fa-linkedin"></i> LinkedIn -->
+        <img src="./images/linkedin.png" alt="" class="contact-icon" />
+      </a>
+
+      <!-- Medium Blog Icon with Link -->
+      <a href="https://medium.com/@bjornkhansen95" target="_blank">
+        <!--             <i class="fa fa-medium"></i> Medium Blog -->
+        <img src="./images/medium.png" alt="" class="contact-icon" />
+      </a>
+      <!-- Container for Floating Blobs -->
+      <div class="blob-wrap1 x">
+        <div class="blob y"></div>
+      </div>
+      <div class="blob-wrap2 x2">
+        <div class="blob" id="blob2"></div>
+      </div>
+      <!-- <div class="blob-wrap blob-2 x2">
       <div class="blob y"></div>
     </div> -->
     </section>
-<script src="script.js"></script>
-<script src="blobScript.js"></script>
-</body>
+    <script src="script.js"></script>
+    <script src="blobScript.js"></script>
+  </body>
 </html>
-
