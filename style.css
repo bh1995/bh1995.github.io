@@ -1,3 +1,12 @@
+@media screen and (max-width: 600px) {
+    section {
+        padding: 1rem; /* Reduced padding for smaller screens */
+        font-size: calc(1vw + 0.5rem); /* Responsive font size */
+        min-font-size: 12px; /* Minimum font size */
+        white-space: pre-wrap; /* Wrap text */
+    }
+}
+
 /* Reset some default styles */
 body, ul, li {
     margin: 0;
@@ -11,8 +20,7 @@ body {
     margin: 0 auto; /* Center the content horizontally */
     max-width: 100%; /* Set a maximum width for the content */
     padding: 0 1rem; /* Add some padding for better readability */
-    // overflow-x: hidden; /* Hide horizontal scrollbar if needed */
-    // overflow-y: hidden; /* Hide horizontal scrollbar if needed */
+
 }
 
 header {
@@ -65,6 +73,7 @@ section {
     padding-top: 10%;
     text-align: center;
     background-color: #f8f8f8;
+    overflow: auto;  
 }
 .fixed-header {
     width: 100%;
@@ -80,6 +89,7 @@ html {
 
 /* CSS for the resume section */
 #cv {
+    max-height: fit-content;
     font-family: monospace;
     background-color: #090326;
     color: #fff;
@@ -123,7 +133,7 @@ html {
     cursor: pointer;
 }
 
-//* CSS for the window-like tooltip */
+/* CSS for the window-like tooltip */
 .tooltip {
     position: relative;
     display: inline-block;
